@@ -26,7 +26,7 @@ public class DateTrainMain {
         //System.out.println(" Second Date include incorrect number");
         long days = -1;
         days=myDate.differenceIdDays(arrDate1[0],arrDate1[1],arrDate1[2]) - myDate.getDayCount(inputFirst);
-        System.out.printf(" Second Days: %d", Math.abs(days));
+        System.out.printf("Difference in days: %d", Math.abs(days));
 
     }
 
