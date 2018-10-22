@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Date {
+class DateLesson06 {
     private int day;
     private int month;
     private int year;
@@ -87,10 +87,10 @@ public class Date {
         return diff;
     }
 
-    public Date() {
+    public DateLesson06() {
     }
 
-    public Date(int day, int month, int year) {
+    public DateLesson06(int day, int month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;

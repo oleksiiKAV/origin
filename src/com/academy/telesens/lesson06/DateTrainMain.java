@@ -1,14 +1,12 @@
 package com.academy.telesens.lesson06;
 
-import java.util.Date;
-
 public class DateTrainMain {
 
     public static void main(String[] args) {
 	// write your code here
 
         int [] arrDate, arrDate1 = new int[3];
-        Date myDate = new Date();
+        DateLesson06 myDate = new DateLesson06();
         String inputFirst, inputSecond;
         System.out.println("Input First Date in date format dd:mm:yyyy");
         inputFirst=myDate.inputDate();
