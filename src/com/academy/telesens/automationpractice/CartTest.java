@@ -33,6 +33,7 @@ public class CartTest {
         System.out.println("Go to cart");
 
         double sumPriceUI = entityAdded.getPrice() * countEntityUI;
+
         EntityDress entityFromCart = readEntityFromCart();
         int countEntityFromCart = readCountEntityFromCart();
 
@@ -40,10 +41,11 @@ public class CartTest {
 
         System.out.println("Assert equals added entity and read entity");
         assert entityAdded.equals(entityFromCart);
+
         //assert count.equals(); - не получается
         if (countEntityFromCart == countEntityUI){ //
             System.out.println(String.format("Сount of entity in Cart is '%d' and correct", countEntityFromCart));
-            System.out.println(String.format("You prise is '%f' and correct", countEntityFromCart * entityAdded.getPrice()));
+            System.out.println(String.format("You prise is '%.2f' and correct", countEntityFromCart * entityAdded.getPrice()));
             }
             else
             System.out.println(String.format("Сount of entity in Cart is '%d' and wrong", countEntityFromCart));
