@@ -94,5 +94,6 @@ class DateLesson06 {
         this.day = day;
         this.month = month;
         this.year = year;
+
     }
 }

@@ -15,7 +15,7 @@ public class CartTest {
         this.browser = browser;
         this.baseUrl = baseUrl;
     }
-
+/*
     public void testAddDressToCart() {
         beforeTest();
         /*
@@ -23,7 +23,7 @@ public class CartTest {
         System.out.println(String.format("Open browser '%s'", browser));
         System.out.println(String.format("Go to '%s'", baseUrl));
         System.out.println("Go to 'Dresses' category");
-        */
+
         System.out.println("Click more");
         EntityDress entityAdded = readCurrentEntityFromUI();
 
@@ -51,7 +51,39 @@ public class CartTest {
             System.out.println(String.format("Сount of entity in Cart is '%d' and wrong", countEntityFromCart));
         System.out.println("Finish 'testAddDressToCart'");
     }
+*/
 
+public void testAddDressToCart(EntityDress addedDress, int amount) {
+        beforeTest();
+        System.out.println("Find and Click more by " + addedDress);
+//        EntityDress entityAdded = readCurrentEntityFromUI();
+
+        System.out.println(String.format("Add entity '%s', amount: %d to cart",
+        addedDress, amount));
+        System.out.println("Go to cart");
+
+        EntityDress entityFromCart = readEntityFromCart();
+        int  amountFromCart = readAmountFromCart();
+        double totalFromCart = readTotalFromCart();
+        double total = amountFromCart*addedDress.getPrice();
+        System.out.println(String.format("Read entity '%s' from cart", entityFromCart));
+
+
+        System.out.println("Assert equals added entity and read entity");
+        assert addedDress.equals(entityFromCart);
+        assert amount == amountFromCart;
+        assert total == totalFromCart;
+        System.out.println("Finish 'testAddDressToCart'");
+        }
+
+private double readTotalFromCart() {
+        return 52.0;
+        }
+
+private int readAmountFromCart() {
+        return 2;
+        }
+        /*
     private int readCountEntityFromUI() {
         CountEntity cntEntity = new CountEntity();
         return cntEntity.setCountEntity(2);
@@ -60,7 +92,7 @@ public class CartTest {
         CountEntity cntEntity = new CountEntity();
         return cntEntity.setCountEntity(2);
     }
-
+*/
     private EntityDress readEntityFromCart() {
         EntityDress entityFromCart = new EntityDress();
         entityFromCart.setName("Printed Dress");
